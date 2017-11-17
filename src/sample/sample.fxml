@@ -12,7 +12,7 @@
    <center>
       <TableView fx:id="tabelka" editable="true" prefHeight="200.0" prefWidth="107.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="Imię" />
+          <TableColumn fx:id="imie" prefWidth="75.0" text="Imię" />
           <TableColumn prefWidth="75.0" text="Nazwisko" />
             <TableColumn prefWidth="75.0" text="Wiek" />
             <TableColumn prefWidth="75.0" text="Wzrost" />
