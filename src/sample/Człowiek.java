@@ -13,12 +13,12 @@ public class Człowiek {
     private final SimpleIntegerProperty pesel;
 
 
-    private Człowiek(String i, String n, int wi, int wz, int p) {
+    public Człowiek(String i, String n){//, int wi, int wz, int p) {
         this.imię = new SimpleStringProperty(i);
         this.nazwisko = new SimpleStringProperty(n);
-        this.wiek = new SimpleIntegerProperty(wi);
-        this.wzrost = new SimpleIntegerProperty(wz);
-        this.pesel = new SimpleIntegerProperty(p);
+        this.wiek = new SimpleIntegerProperty(22);
+        this.wzrost = new SimpleIntegerProperty(124);
+        this.pesel = new SimpleIntegerProperty(1212);
         }
 
     public String getImię() {
