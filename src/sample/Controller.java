@@ -25,7 +25,7 @@ public class Controller {
 
 
     @FXML public void handleClick(ActionEvent actionEvent) {
-    tabelka.getItems().add(czlek = new Człowiek(tI.getText(), tN.getText(),tWi.getText(), tWz.getText(), tP.getText()));
+    tabelka.getItems().add(czlek = new Człowiek(tI.getText(), tN.getText(),Integer.parseInt(tWi.getText()), tWz.getText(), tP.getText()));
     dupka_imie = czlek.getImię();
 
 
