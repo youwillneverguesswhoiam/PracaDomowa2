@@ -8,17 +8,17 @@ public class Człowiek {
 
     private final SimpleStringProperty imię;
     private final SimpleStringProperty nazwisko;
-    private final SimpleIntegerProperty wiek;
-    private final SimpleIntegerProperty wzrost;
-    private final SimpleIntegerProperty pesel;
+    private final SimpleStringProperty wiek;
+    private final SimpleStringProperty wzrost;
+    private final SimpleStringProperty pesel;
 
 
-    public Człowiek(String i, String n){//, int wi, int wz, int p) {
+    public Człowiek(String i, String n, String wi, String wz, String p) {
         this.imię = new SimpleStringProperty(i);
         this.nazwisko = new SimpleStringProperty(n);
-        this.wiek = new SimpleIntegerProperty(22);
-        this.wzrost = new SimpleIntegerProperty(124);
-        this.pesel = new SimpleIntegerProperty(1212);
+        this.wiek = new SimpleStringProperty(wi);
+        this.wzrost = new SimpleStringProperty(wz);
+        this.pesel = new SimpleStringProperty(p);
         }
 
     public String getImię() {
@@ -41,35 +41,35 @@ public class Człowiek {
         nazwisko.set(n);
     }
 
-    public int getWiek() {
+    public String getWiek() {
 
         return wiek.get();
     }
 
-    public void setWiek(int wi) {
+   /* public void setWiek(int wi) {
 
         wiek.set(wi);
-    }
+    }*/
 
-    public int getWzrost() {
+    public String getWzrost() {
 
         return wzrost.get();
     }
 
-    public void setWzrost(int wz) {
+    /*public void setWzrost(int wz) {
 
         wzrost.set(wz);
     }
-
-    public int getPesel() {
+*/
+    public String getPesel() {
 
         return pesel.get();
     }
 
-    public void setPesel(int p) {
+    /*public void setPesel(int p) {
 
         pesel.set(p);
-    }
+    }*/
 
 }
 
