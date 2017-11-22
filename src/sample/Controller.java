@@ -21,23 +21,30 @@ public class Controller {
     public Button guzik;
     public String dupka_imie;
     public Człowiek czlek;
-    @FXML public TableColumn colI;
-    @FXML public TableColumn colN;
-    @FXML public TableColumn colWi;
-    @FXML public TableColumn colWz;
-    @FXML public TableColumn colP;
-    @FXML public TableColumn colU;
+    public String [] lista = {"Imię", "Nazwisko","Wiek", "Wzrost", "Pesel"};
+
 
     @FXML public void handleClick(ActionEvent actionEvent) {
-    tabelka.getItems().add(czlek = new Człowiek(tI.getText(), "tomek"));
+    tabelka.getItems().add(czlek = new Człowiek(tI.getText(), tN.getText(),tWi.getText(), tWz.getText(), tP.getText()));
     dupka_imie = czlek.getImię();
+
 
     }
     public void initialize() {
+        int licznik=0;
+
         for (javafx.scene.control.TableColumn<Człowiek, ?> column : tabelka.getColumns())
          {
+
+
              javafx.scene.control.TableColumn<Człowiek, String> textColumn = (javafx.scene.control.TableColumn<Człowiek, String>) column;
-             textColumn.setCellValueFactory(new PropertyValueFactory<>("dupka_imie"));
+             if (licznik <5) {
+                 textColumn.setCellValueFactory(new PropertyValueFactory<>(lista[licznik]));
+                 licznik++;
+             }
+             else
+                 textColumn.setCellValueFactory(new PropertyValueFactory<>(lista[4]));
+
         }
         }
 }
