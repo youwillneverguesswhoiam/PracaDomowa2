@@ -8,15 +8,15 @@ public class Człowiek {
 
     private final SimpleStringProperty imię;
     private final SimpleStringProperty nazwisko;
-    private final SimpleStringProperty wiek;
+    private final SimpleIntegerProperty wiek;
     private final SimpleStringProperty wzrost;
     private final SimpleStringProperty pesel;
 
 
-    public Człowiek(String i, String n, String wi, String wz, String p) {
+    public Człowiek(String i, String n, Integer wi, String wz, String p) {
         this.imię = new SimpleStringProperty(i);
         this.nazwisko = new SimpleStringProperty(n);
-        this.wiek = new SimpleStringProperty(wi);
+        this.wiek = new SimpleIntegerProperty(wi);
         this.wzrost = new SimpleStringProperty(wz);
         this.pesel = new SimpleStringProperty(p);
         }
@@ -41,7 +41,7 @@ public class Człowiek {
         nazwisko.set(n);
     }
 
-    public String getWiek() {
+    public Integer getWiek() {
 
         return wiek.get();
     }
