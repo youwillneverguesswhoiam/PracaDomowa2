@@ -19,14 +19,14 @@ public class Controller {
     @FXML public TextField tP;
 
     public Button guzik;
-    public String dupka_imie;
+
     public Człowiek czlek;
     public String [] lista = {"Imię", "Nazwisko","Wiek", "Wzrost", "Pesel"};
 
 
     @FXML public void handleClick(ActionEvent actionEvent) {
-    tabelka.getItems().add(czlek = new Człowiek(tI.getText(), tN.getText(),Integer.parseInt(tWi.getText()), tWz.getText(), tP.getText()));
-    dupka_imie = czlek.getImię();
+    tabelka.getItems().add(czlek = new Człowiek(tI.getText(), tN.getText(),Integer.parseInt(tWi.getText()), Integer.parseInt(tWz.getText()), Integer.parseInt(tP.getText())));
+
 
 
     }

@@ -9,16 +9,16 @@ public class Człowiek {
     private final SimpleStringProperty imię;
     private final SimpleStringProperty nazwisko;
     private final SimpleIntegerProperty wiek;
-    private final SimpleStringProperty wzrost;
-    private final SimpleStringProperty pesel;
+    private final SimpleIntegerProperty wzrost;
+    private final SimpleIntegerProperty pesel;
 
 
-    public Człowiek(String i, String n, Integer wi, String wz, String p) {
+    public Człowiek(String i, String n, Integer wi, Integer wz, Integer p) {
         this.imię = new SimpleStringProperty(i);
         this.nazwisko = new SimpleStringProperty(n);
         this.wiek = new SimpleIntegerProperty(wi);
-        this.wzrost = new SimpleStringProperty(wz);
-        this.pesel = new SimpleStringProperty(p);
+        this.wzrost = new SimpleIntegerProperty(wz);
+        this.pesel = new SimpleIntegerProperty(p);
         }
 
     public String getImię() {
@@ -51,7 +51,7 @@ public class Człowiek {
         wiek.set(wi);
     }*/
 
-    public String getWzrost() {
+    public Integer getWzrost() {
 
         return wzrost.get();
     }
@@ -61,7 +61,7 @@ public class Człowiek {
         wzrost.set(wz);
     }
 */
-    public String getPesel() {
+    public Integer getPesel() {
 
         return pesel.get();
     }
